@@ -1,0 +1,38 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+# IDE and local settings
+.idea/
+.vscode/
+*.iml
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+# Runtime data and secrets
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.pem
+*.p12
+*.pfx
+idea-inbox-*.json
+idea-inbox-*.md
+# OS
+.DS_Store
+Thumbs.db
+
+# Nested build outputs and local secrets
+**/build/
+.env
+.env.*
+*.log
+*.dmp
+*.hprof
+*.db
+*.db-shm
+*.db-wal
