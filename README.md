@@ -1,5 +1,7 @@
 # Idea Inbox
 
+![Idea Inbox by iPPLab](docs/assets/cover.svg)
+
 安卓随手记，Windows 接着整理。一个离线优先的纯文字灵感收件箱：记录保存在本机，通过配对后的局域网 HTTPS 连接同步，无需账号或云端。
 
 [English](README.en.md) · [同步协议](docs/sync-protocol.md) · [参与贡献](CONTRIBUTING.md) · [安全说明](SECURITY.md)

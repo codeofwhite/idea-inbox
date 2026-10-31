@@ -1,5 +1,7 @@
 # Idea Inbox
 
+![Idea Inbox by iPPLab](docs/assets/cover.svg)
+
 Capture ideas on Android. Organize them on Windows. An offline-first plain-text inbox with paired LAN HTTPS sync, no accounts and no cloud backend.
 
 [中文](README.md) · [Protocol (Chinese)](docs/sync-protocol.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)

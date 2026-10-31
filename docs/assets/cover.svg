@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Idea Inbox — by iPPLab</title>
+<desc id="desc">灵感随手记，回到电脑接着整理。在公交上记下的一闪念，不该困在手机里。离线优先，局域网同步，无需云端。</desc>
+<defs>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#deded8" stroke-width="1" opacity=".35"/></pattern>
+
+ <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#fcfcfa"/><stop offset="1" stop-color="#f1f2ef"/></linearGradient>
+</defs>
+<rect width="1600" height="800" fill="#f6f5f0"/>
+<rect x="830" width="770" height="800" fill="url(#grid)"/>
+<path d="M80 172H1520" stroke="#d9dad5"/>
+<g font-family="Inter, 'Segoe UI', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+ <g transform="translate(80 72)" fill="none" stroke="#315de5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1 20 10 3h27l9 17v20H1Z"/><path d="M2 23h12l4 8h12l4-8h11"/>
+ </g>
+ <text x="143" y="111" font-size="36" font-weight="650" fill="#202a35" letter-spacing="-.8">iPPLab</text>
+ <text x="1520" y="104" text-anchor="end" fill="#717979" font-size="16" letter-spacing="3">TOOLS FOR EVERYDAY THOUGHTS</text>
+ <text x="78" y="304" fill="#202a35" font-size="98" font-weight="700" letter-spacing="-5">Idea Inbox</text>
+ <rect x="83" y="338" width="54" height="5" rx="2.5" fill="#315de5"/>
+ <text x="80" y="410" fill="#29343e" font-size="35" font-weight="500">灵感随手记，回到电脑接着整理。</text>
+ <text x="83" y="482" fill="#757d7e" font-size="24">在公交上记下的一闪念，</text>
+ <text x="83" y="522" fill="#757d7e" font-size="24">不该困在手机里。</text>
+ <g font-size="18" fill="#414d58">
+  <circle cx="88" cy="606" r="4" fill="#315de5"/><text x="105" y="612">离线优先</text>
+  <path d="M204 596v19" stroke="#cccfc9"/><text x="225" y="612">局域网同步</text>
+  <path d="M346 596v19" stroke="#cccfc9"/><text x="367" y="612">无需云端</text>
+ </g>
+ <text x="83" y="733" fill="#79807e" font-size="17">by <tspan fill="#29343e" font-weight="600">iPPLab</tspan></text>
+ <text x="1520" y="733" text-anchor="end" fill="#79807e" font-size="17">Android + Windows</text>
+</g>
+<!-- A quiet connection between two local devices. -->
+<path d="M988 580C1070 662 1400 652 1442 481" fill="none" stroke="#315de5" stroke-width="2" stroke-dasharray="5 9" opacity=".35"/>
+<circle cx="1068" cy="624" r="5" fill="#315de5"/>
+<!-- Desktop window -->
+<g>
+ <rect x="1060" y="259" width="452" height="318" rx="17" fill="#fff" stroke="#d7dcd9"/>
+ <path d="M1077 259h418q17 0 17 17v32h-452v-32q0-17 17-17" fill="#eceeea"/>
+ <circle cx="1083" cy="283" r="4" fill="#b4bcb9"/><circle cx="1098" cy="283" r="4" fill="#c5ccc7"/><circle cx="1113" cy="283" r="4" fill="#d2d7d1"/>
+ <rect x="1081" y="332" width="92" height="223" rx="7" fill="#f5f6f2"/>
+ <rect x="1095" y="352" width="62" height="7" rx="3" fill="#c1cac6"/>
+ <rect x="1090" y="378" width="74" height="25" rx="5" fill="#e2e9fc"/>
+ <rect x="1101" y="387" width="48" height="6" rx="3" fill="#6d86d4"/>
+ <path d="M1101 424h43m-43 24h33" stroke="#cbd1cd" stroke-width="6" stroke-linecap="round"/>
+ <rect x="1193" y="331" width="296" height="100" rx="9" fill="#faf9f3" stroke="#e5e5dc"/>
+ <rect x="1212" y="350" width="116" height="9" rx="4" fill="#6d797b"/>
+ <path d="M1216 381h246m-246 19h191" stroke="#d9dcd5" stroke-width="6" stroke-linecap="round"/>
+ <rect x="1193" y="446" width="296" height="107" rx="9" fill="#fafbf8" stroke="#e5e8e0"/>
+ <path d="M1216 469h91m-91 27h242m-242 19h170" stroke="#d0d7ce" stroke-width="6" stroke-linecap="round"/>
+</g>
+<!-- Phone -->
+<g transform="rotate(-7 987 442)">
+ <rect x="898" y="280" width="178" height="340" rx="29" fill="#26343e"/>
+ <rect x="905" y="288" width="164" height="324" rx="23" fill="url(#screen)"/>
+ <rect x="957" y="297" width="60" height="12" rx="6" fill="#26343e"/>
+ <rect x="922" y="336" width="82" height="10" rx="5" fill="#697578"/>
+ <rect x="919" y="367" width="136" height="112" rx="10" fill="#fff" stroke="#e2e6e0"/>
+ <path d="M934 391h87m-87 20h100m-100 20h67" stroke="#c7cfca" stroke-width="6" stroke-linecap="round"/>
+ <rect x="919" y="494" width="136" height="53" rx="9" fill="#e4eafb"/>
+ <path d="M934 511h91m-91 17h56" stroke="#a5b6e9" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="1027" cy="575" r="17" fill="#315de5"/><path d="M1020 575h14m-7-7v14" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+ <path d="M963 599h48" stroke="#aab1ad" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- One thought carried from phone to desktop -->
+<g transform="rotate(9 1130 240)">
+ <rect x="1052" y="187" width="156" height="109" rx="10" fill="#e5ecff" stroke="#c5d3ff"/>
+ <path d="M1073 220h79m-79 22h106m-106 18h63" stroke="#8fa5e5" stroke-width="6" stroke-linecap="round"/>
+ <path d="m1184 198 4 10 10 4-10 4-4 10-4-10-10-4 10-4Z" fill="#315de5"/>
+</g>
+<path d="M80 687H1520" stroke="#d9dad5"/>
+</svg>
