@@ -8,9 +8,9 @@ Capture ideas on Android. Organize them on Windows. An offline-first plain-text 
 
 ## Status
 
-Version 0.1.0 is a development build. Windows release and Android debug builds succeeded; static analysis and 14 automated tests passed. The project author reports normal operation on a real Android phone and Windows PC. This is personal testing, not a documented exhaustive acceptance matrix or an independent security audit.
+Version 0.1.0 is a development build. Windows release and release-signed Android builds succeeded; static analysis and 14 automated tests passed. The project author reports normal operation on a real Android phone and Windows PC. This is personal testing, not a documented exhaustive acceptance matrix or an independent security audit.
 
-This source release does not include downloadable installers or an Android release signing configuration.
+Download the [v0.1.0 pre-release](https://github.com/codeofwhite/idea-inbox/releases/tag/v0.1.0): Windows portable ZIP, release-signed universal Android APK, companion notices and SHA-256 checksums. See [release notes](docs/releases/v0.1.0.md) for installation and signing maintenance. A release build is not a stability certification.
 
 ## Features
 
@@ -20,7 +20,7 @@ This source release does not include downloadable installers or an Android relea
 - QR pairing with confirmation on the PC, pinned TLS certificate fingerprint and pairing token authentication.
 - Immutable revisions, deduplication, preserved concurrent edits and manual conflict resolution.
 - JSON backup and merge restore; Markdown export.
-- No accounts, telemetry, cloud or AI services.
+- No accounts, note-cloud backend or AI services are integrated by this project. Android QR scanning uses Google ML Kit, whose SDK collects diagnostic/usage metrics; the complete app is not claimed to be telemetry-free. See [Google's data disclosure](https://developers.google.com/ml-kit/android-data-disclosure).
 
 ## Use
 
@@ -50,7 +50,7 @@ flutter build apk --debug --no-pub
 ```
 
 Windows output: `build/windows/x64/runner/Release/`. Keep the entire folder, including DLLs and data.
-Android output: `build/app/outputs/flutter-apk/app-debug.apk`. The current universal debug build is approximately 180 MiB and includes three ABIs and an offline scanner model; release size has not been measured. Configure a dedicated signing key before distributing an Android release. Never commit signing material.
+Android output: `build/app/outputs/flutter-apk/app-debug.apk`. The current universal debug build is approximately 180 MiB and includes three ABIs and an offline scanner model; release size has not been measured. Release builds require IDEA_INBOX_KEYSTORE, IDEA_INBOX_KEY_ALIAS, IDEA_INBOX_STORE_PASSWORD and IDEA_INBOX_KEY_PASSWORD in the build environment. Never commit signing material.
 
 Initial builds download dependencies and native assets; the application does not need these services at runtime. Keep pubspec.lock committed.
 

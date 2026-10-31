@@ -8,9 +8,9 @@
 
 ## 状态
 
-**0.1.0 开发版。** Windows release、Android debug 已成功构建；静态检查和 14 项自动测试通过。项目作者已反馈 Android + Windows 真机使用功能正常。这是个人使用验证，不代表下列所有异常场景均已验收，也不代表独立安全审计。
+**0.1.0 开发版。** Windows release、正式签名 Android release 已成功构建；静态检查和 14 项自动测试通过。项目作者已反馈 Android + Windows 真机使用功能正常。这是个人使用验证，不代表下列所有异常场景均已验收，也不代表独立安全审计。
 
-本轮开源提供源码；尚未发布安装包或配置正式 Android release 签名。
+下载 [v0.1.0 预览版](https://github.com/codeofwhite/idea-inbox/releases/tag/v0.1.0)：Windows 便携 ZIP、Android 正式签名通用 APK、许可包与 SHA-256 校验文件。安装和签名维护详见 [发布说明](docs/releases/v0.1.0.md)。正式构建不等于稳定版认证。
 
 ## 为什么做这个
 
@@ -26,7 +26,7 @@
 - TLS 传输、证书指纹固定、配对凭证认证。
 - 不可变修订、重复传输去重、并发冲突保留及手动合并。
 - JSON 完整备份与合并恢复；Markdown 导出。
-- 无云端、账号、遥测或 AI 服务。可使用系统输入法的语音转文字，输入法的联网行为由其自身设置决定。
+- 本项目不接入账号、笔记云端或 AI 服务。安卓扫码使用 Google ML Kit：其 SDK 会收集诊断/使用指标，不能宣称整包零遥测。详见 [Google 官方数据披露](https://developers.google.com/ml-kit/android-data-disclosure)。系统输入法联网由自身设置决定。
 
 ## 使用
 
@@ -72,7 +72,7 @@ flutter build apk --debug --no-pub
 
 - Windows：输出在 `build/windows/x64/runner/Release/`。运行或分发时保留整个目录，不能只复制 exe。
 - Android：试装文件在 `build/app/outputs/flutter-apk/app-debug.apk`。当前通用 debug 包约 180 MiB，含三个架构与离线扫码模型；不代表正式 release 体积。
-- Android release 未配置签名。公开分发正式 APK 前自行配置专用签名，密钥和口令不得提交。
+- Android release 从 IDEA_INBOX_KEYSTORE、IDEA_INBOX_KEY_ALIAS、IDEA_INBOX_STORE_PASSWORD、IDEA_INBOX_KEY_PASSWORD 环境变量读取签名，缺少时构建失败；密钥和口令不得提交。
 - 首次构建会联网下载依赖、引擎和原生资源；运行应用不依赖这些下载服务。保留并提交 `pubspec.lock`。
 - targetSdk 固定为 36；升级前需处理新平台局域网权限要求并真机验证。
 
@@ -92,7 +92,7 @@ $env:GRADLE_OPTS = "$env:GRADLE_OPTS -Dorg.gradle.project.kotlin.incremental=fal
 | --- | --- |
 | flutter analyze --no-pub | 通过 |
 | flutter test --no-pub | 14 项通过 |
-| Windows release / Android debug 构建 | 均成功 |
+| Windows release / 正式签名 Android release 构建 | 均成功 |
 | APK 签名与结构 | v2 签名有效，三个架构均含 SQLite/JNI 库 |
 | Android + Windows 真机使用 | 作者反馈功能正常；未逐项记录完整验收矩阵 |
 

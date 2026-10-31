@@ -93,3 +93,13 @@ Regenerate this inventory when updating pubspec.lock. SDK packages flutter_local
 | xdg_directories | 1.1.0 | [LICENSE](third_party/licenses/xdg_directories/LICENSE) |
 | xml | 7.1.0 | [LICENSE](third_party/licenses/xml/LICENSE) |
 | yaml | 3.1.4 | [LICENSE](third_party/licenses/yaml/LICENSE) |
+
+## v0.1.0 binary distribution notices
+
+- Flutter engine: [Windows](third_party/licenses/runtime/Flutter-Windows-LICENSE.md) and [Android](third_party/licenses/runtime/Flutter-Android-LICENSE.md). The distributions retain Flutter's generated NOTICES.Z assets.
+- Bundled ML Kit barcode scanner 17.3.0: [upstream third-party license text](third_party/licenses/runtime/MLKit-third_party_licenses.txt) and [index](third_party/licenses/runtime/MLKit-third_party_licenses.json), extracted unchanged from the upstream AAR. ML Kit itself is provided under [ML Kit Terms of Service](https://developers.google.com/ml-kit/terms), as identified by its Maven POM, and is not relicensed under this project's MIT license.
+- SQLite native library: [SQLite copyright / public-domain statement](https://www.sqlite.org/copyright.html); the Dart wrapper retains [its original license](third_party/licenses/sqlite3/LICENSE).
+- AndroidX and Kotlin components retain their upstream notices; APK META-INF and packaged license assets are preserved. The license companion archive includes notices extracted from the packaged APK and upstream scanner AAR.
+- Windows runtime prerequisites supplied by Microsoft remain under Microsoft's terms; no Microsoft redistributable installer is included in this release.
+
+The companion notices archive is part of the binary release. Keep its notices when redistributing the APK, and retain the licenses directory included in the Windows ZIP. No independent legal or security audit is claimed.

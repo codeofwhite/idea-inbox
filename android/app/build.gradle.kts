@@ -4,6 +4,19 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+
+// Signing material is supplied only to the build process, never committed.
+val releaseSigning = listOf(
+    "IDEA_INBOX_KEYSTORE", "IDEA_INBOX_KEY_ALIAS",
+    "IDEA_INBOX_STORE_PASSWORD", "IDEA_INBOX_KEY_PASSWORD"
+).associateWith { System.getenv(it) }
+val hasReleaseSigning = releaseSigning.values.all { !it.isNullOrBlank() }
+gradle.taskGraph.whenReady {
+    if (allTasks.any { it.project == project && it.name.contains("Release") } && !hasReleaseSigning) {
+        throw GradleException("Release signing requires IDEA_INBOX_KEYSTORE, IDEA_INBOX_KEY_ALIAS, IDEA_INBOX_STORE_PASSWORD and IDEA_INBOX_KEY_PASSWORD.")
+    }
+}
+
 android {
     namespace = "dev.ideainbox.idea_inbox"
     compileSdk = flutter.compileSdkVersion
@@ -29,10 +42,20 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(releaseSigning.getValue("IDEA_INBOX_KEYSTORE")!!)
+                keyAlias = releaseSigning.getValue("IDEA_INBOX_KEY_ALIAS")
+                storePassword = releaseSigning.getValue("IDEA_INBOX_STORE_PASSWORD")
+                keyPassword = releaseSigning.getValue("IDEA_INBOX_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // Configure a private release signing key before public distribution.
-            signingConfig = null
+            if (hasReleaseSigning) signingConfig = signingConfigs.getByName("release")
         }
     }
 }
